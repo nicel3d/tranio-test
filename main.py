@@ -75,5 +75,5 @@ print("num\t:\tnum_count")
 for i in array:
     print(str(i[0]) + "\t:\t" + str(i[1]))
 
-print("Рассчитать среднеквадратичное отклонение:")
+print("4. Рассчитать среднеквадратичное отклонение:")
 print(avgQudraticValues(data))
