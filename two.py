@@ -20,14 +20,14 @@ def lowerText(line):
     l = 0
     text = ""
     reText = ""
-    reFA = re.findall(r'([A-Z]([a-z]))|(([a-z])[A-Z])', line)
-    print(reFA)
-    #return reFA
+    reFA = re.findall(r'(([a-z])[A-Z]([a-z]))|(([a-z])[A-Z])|([A-Z]([a-z]))', line)
     for reItem in reFA:
         if reItem[1] != "":
-            reText += reItem[1]
+            reText += reItem[1] + reItem[2]
+        elif reItem[3] != "":
+            reText += reItem[4]
         else:
-            reText += reItem[3]
+            reText += reItem[6]
     print(reText)
     for x in line:
         y = 0
